@@ -1,0 +1,174 @@
+GIT Commands used:
+
+$ cd /C/Users/username
+
+$ mkdir gitPractice
+
+$ cd gitPractice
+
+$ git init	//initialization
+
+$ ls -a		//linux equivalent ng "dir" sa Windows
+
+$ cd .git
+
+$ ls -a
+
+$ cd ..
+
+//adding a file
+
+$ notepad a.txt
+
+$ git status
+
+$ notepad a.txt
+
+(in notepad, type "change 1", save then close)
+
+$ git status
+
+$ git add a.txt //staging. readies file for version control
+
+$ git status
+
+$ git commit -m "initial commit" //whatever changes made, the file is managed and committed. It is now stored in the repository.
+
+$ git status
+
+$ git log //contains the history of commits
+
+$ notepad a.txt
+
+(in notepad, type "change 2", save then close)
+
+$ git diff a.txt //tracks changes line by line; inspection tool
+
+$ notepad b.txt
+
+$ git add . //readying files for commit. the "." means any file in the directory
+
+$ notepad test.log
+
+$ touch .gitignore	//to create .gitignore file
+
+$ notepad .gitignore
+
+(type "*.log" in the notepad to exclude log files. You can add other file types that you want to exclude)
+
+$ git status
+
+$ git add .gitignore
+
+$ git commit -m "added b.txt and .gitignore"
+
+$ git status
+
+$ git branch MyBranch //split MyBranch from Main
+
+$ got checkout MyBranch //to switch to MyBranch
+
+$ git branch //to see what branch you are currently in.
+
+$ touch c.txt //created a "c.txt file"
+
+$ ls c.txt
+
+$ git add .
+
+$ git commit -m "added c.txt"
+
+$ git checkout master
+
+$ git branch
+
+$ ls c.txt
+
+$ git merge MyBranch
+
+$ ls c.txt
+
+$ notepad a.txt
+(type "change 3", save then close)
+
+$ git commit -a -m "added change 3"
+
+$ git checkout MyBranch
+
+$ notepad a.txt
+(type "change 4", save then close)
+
+$ git merge master	//files not same kaya error.
+
+$ notepad a.txt
+
+$ git commit -a -m "added change 4"
+
+$ git merge master
+
+$ notepad a.txt
+(remove HEAD, MASTER and equal lines then save and close)
+
+$ git add .
+
+$ git commit -m "Resolve Conflict"
+
+$ git merge master
+
+$ git branch
+
+$ touch newfile.txt
+
+$ git checkout master
+
+$ ls
+
+$ git checkout MyBranch
+
+$ git stash
+
+$ ls
+
+$ git status
+
+$ git stash apply
+
+$ ls
+
+$ git stash
+
+$ git checkout master
+
+$ ls
+
+$ git remote
+
+$ cd ..
+
+$ git clone https://github.com/sascha-tayefeh/JUnit4-and-Maven-Example.git mavenProj
+
+// makes a clone of a local repository
+
+$ cd mavenProj
+
+$ ls
+
+$ git remote
+
+$ ls
+
+$ git remote -v // -v means verbose; gets origin's urls
+
+$ git fetch origin //to fetch updates from the remote origin to the local repository
+
+$ git pull origin
+
+$ cd ..
+
+$ cd gitPractice
+
+$ notepad a.txt
+(type any change, save then close)
+
+$ git commit -a --author="Nicole<nicole.alexis.alonzo@accenture.com>" -m "different user"
+
